@@ -24,7 +24,7 @@ src/main/java/librarycentre_package/
 ├── WestminsterLibraryManager.java # Main implementation
 ├── ItemTableModel.java            # Table model backing the GUI
 ├── ItemTableGUI.java              # Swing GUI for browsing items
-└── LibraryCentre_MockLabBasedPractical.java  # Entry point (main)
+└── LibraryCentre.java              # Entry point (main)
 ```
 
 ## Running it
@@ -33,7 +33,7 @@ Requires Java 17+.
 
 ```bash
 javac -d out src/main/java/librarycentre_package/*.java
-java -cp out librarycentre_package.LibraryCentre_MockLabBasedPractical
+java -cp out librarycentre_package.LibraryCentre
 ```
 
 Or build/run via Maven (`pom.xml` included) if you have Maven installed.

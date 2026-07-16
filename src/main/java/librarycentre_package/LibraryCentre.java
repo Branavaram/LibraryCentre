@@ -15,7 +15,7 @@ package librarycentre_package;
          */
 
 
-public class LibraryCentre_MockLabBasedPractical {
+public class LibraryCentre {
 
     public static void main(String[] args) {
         
