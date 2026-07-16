@@ -11,13 +11,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class WestminsterLibraryManager implements LibraryManager {
+public class LibraryManagerImpl implements LibraryManager {
     
     // ArrayLists
     public ArrayList<Item> itemList;
     public int item_limit;
     
-    public WestminsterLibraryManager(int maxItemNumber){
+    public LibraryManagerImpl(int maxItemNumber){
         itemList = new ArrayList<Item>();
         item_limit = maxItemNumber;
     }
@@ -27,7 +27,7 @@ public class WestminsterLibraryManager implements LibraryManager {
          boolean exit = false; // Exit flag
         
         // Run console menu
-        System.out.println("\n-- WESTMINSTER LIBRARY MANAGER CONSOLE MENU--");
+        System.out.println("\n-- LIBRARY MANAGER CONSOLE MENU--");
         
         System.out.println("To save and exit, press 0");
         

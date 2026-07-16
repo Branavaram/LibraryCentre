@@ -28,7 +28,7 @@ public class ItemTableGUI extends JFrame {
     public ItemTableGUI(ArrayList<Item> itemList){
         
         //set the title
-        this.setTitle("Items in Westminster Library");
+        this.setTitle("Items in the Library");
         
         // initialise and instantiate the instance variable 
         this.itemList = itemList;

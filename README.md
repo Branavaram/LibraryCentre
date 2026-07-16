@@ -10,7 +10,7 @@ The app models a library catalogue using an abstract `Item` base class extended 
 - **DVD** — title, ISBN, genre, director
 - **Magazine** — title, ISBN, issue number, publication frequency, editor
 
-`WestminsterLibraryManager` implements the `LibraryManager` interface and handles adding items, listing them, and editing titles, with both a text menu and a Swing GUI (`ItemTableGUI` / `ItemTableModel`) for viewing items in a table.
+`LibraryManagerImpl` implements the `LibraryManager` interface and handles adding items, listing them, and editing titles, with both a text menu and a Swing GUI (`ItemTableGUI` / `ItemTableModel`) for viewing items in a table.
 
 ## Project structure
 
@@ -21,7 +21,7 @@ src/main/java/librarycentre_package/
 ├── DVD.java
 ├── Magazine.java
 ├── LibraryManager.java            # Interface for library management operations
-├── WestminsterLibraryManager.java # Main implementation
+├── LibraryManagerImpl.java         # Main implementation
 ├── ItemTableModel.java            # Table model backing the GUI
 ├── ItemTableGUI.java              # Swing GUI for browsing items
 └── LibraryCentre.java              # Entry point (main)

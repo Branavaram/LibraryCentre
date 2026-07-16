@@ -19,7 +19,7 @@ public class LibraryCentre {
 
     public static void main(String[] args) {
         
-       WestminsterLibraryManager libraryCentre = new WestminsterLibraryManager(5);
+       LibraryManagerImpl libraryCentre = new LibraryManagerImpl(5);
     
         boolean exit = false;
         
