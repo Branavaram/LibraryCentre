@@ -4,10 +4,6 @@
  */
 package librarycentre_package;
 
-/**
- *
- * @author brana
- */
 public class Magazine extends Item {
     
     // instance variable

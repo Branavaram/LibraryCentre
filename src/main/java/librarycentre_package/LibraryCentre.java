@@ -4,17 +4,6 @@
 
 package librarycentre_package;
 
-/**** ENTER HERE YOUR DETAILS:*******
-         * 
-         * FIRST NAME:
-         * 
-         * LAST NAME:
-         * 
-         * STUDENT ID:
-         * 
-         */
-
-
 public class LibraryCentre {
 
     public static void main(String[] args) {
