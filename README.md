@@ -1,6 +1,6 @@
 # LibraryCentre
 
-A Java console/Swing application for managing a library's collection of items (books, DVDs, and magazines), built as a university mock lab practical.
+A Java console/Swing application for managing a library's collection of items (books, DVDs, and magazines).
 
 ## Overview
 
