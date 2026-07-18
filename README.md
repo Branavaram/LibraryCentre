@@ -1,5 +1,10 @@
 # LibraryCentre
 
+![Java](https://img.shields.io/badge/Java-17-ED8B00?logo=openjdk&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-Build-C71A36?logo=apache-maven&logoColor=white)
+![Swing](https://img.shields.io/badge/UI-Swing-4B8BBE)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 A Java console/Swing application for managing a library's collection of items (books, DVDs, and magazines).
 
 ## Overview
