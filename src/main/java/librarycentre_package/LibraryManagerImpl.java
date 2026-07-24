@@ -80,6 +80,7 @@ public class LibraryManagerImpl implements LibraryManager {
         if(itemList.size() < item_limit){
             System.out.println("Press 1 if you want to add a Book");
             System.out.println("Press 2 if you want to add a DVD");
+            System.out.println("Press 3 if you want to add a Magazine");
             
             int choiceItem = s.nextInt();
             s.nextLine();
@@ -118,15 +119,38 @@ public class LibraryManagerImpl implements LibraryManager {
 
                     System.out.println("Enter the director's name");
                     String director = s.nextLine();
-                    
-                    // create a new receptionist and add to the list
+
                     DVD dvd = new DVD(title, isbn);
                     dvd.setGenre(genre);
                     dvd.setDirector(director);
                     dvd.setPublicationYear(year);
-                    
+
                     this.addItemToList(dvd);
                     break;
+
+                case 3:
+                    //it is a magazine
+                    System.out.println("Enter the issue number");
+                    int issueNumber = s.nextInt();
+                    s.nextLine();
+
+                    System.out.println("Enter the publication frequency (e.g. Weekly, Monthly)");
+                    String frequency = s.nextLine();
+
+                    System.out.println("Enter the editor's name");
+                    String editor = s.nextLine();
+
+                    Magazine magazine = new Magazine(title, isbn);
+                    magazine.setIssueNumber(issueNumber);
+                    magazine.setPublicationFrequency(frequency);
+                    magazine.setEditor(editor);
+                    magazine.setPublicationYear(year);
+
+                    this.addItemToList(magazine);
+                    break;
+
+                default:
+                    System.out.println("Invalid item type. Add cancelled.");
             }
             
         }
@@ -157,8 +181,9 @@ public class LibraryManagerImpl implements LibraryManager {
                     System.out.print("BOOK - ");
                 else if (item instanceof DVD)
                     System.out.print("DVD - ");
-                //add here teh code if you added teh class Megazine
-                
+                else if (item instanceof Magazine)
+                    System.out.print("MAGAZINE - ");
+
                 System.out.println(item.toString());
             }
         }
