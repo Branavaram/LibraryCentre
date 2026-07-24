@@ -4,9 +4,6 @@
  */
 package librarycentre_package;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -91,7 +88,7 @@ public class LibraryManagerImpl implements LibraryManager {
             System.out.println("Enter the Title");
             String title = s.nextLine();
             
-            System.out.println("Enetr the ISBN");
+            System.out.println("Enter the ISBN");
             String isbn = s.nextLine();
             
             System.out.println("Enter the publication year ");
@@ -145,7 +142,7 @@ public class LibraryManagerImpl implements LibraryManager {
             itemList.add(item);
         }
         else{
-            System.out.println("No more space in teh list");
+            System.out.println("No more space in the list");
         }
     }
 
