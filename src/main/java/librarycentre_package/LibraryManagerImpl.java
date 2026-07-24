@@ -35,10 +35,9 @@ public class LibraryManagerImpl implements LibraryManager {
         System.out.println("To Open GUI, press 3");
         
         System.out.println("Modify Title, press 4");
-        
-        
 
-        
+        System.out.println("Search by Title, press 5");
+
         // Switch based on selected option
         Scanner s = new Scanner(System.in);
         int choice;
@@ -67,6 +66,9 @@ public class LibraryManagerImpl implements LibraryManager {
                 break;
            case 4:
                 this.editTitleItem();
+                break;
+           case 5:
+                this.searchByTitle();
                 break;
         }
         
@@ -197,6 +199,39 @@ public class LibraryManagerImpl implements LibraryManager {
         ItemTableGUI table = new ItemTableGUI(itemList);
         table.setVisible(true);
     }
+    @Override
+    public void searchByTitle() {
+        if (itemList.isEmpty()) {
+            System.out.println("There are no items in the system.");
+            return;
+        }
+
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter a title (or part of one) to search for:");
+        String query = s.nextLine().toLowerCase();
+
+        int matches = 0;
+        for (Item item : itemList) {
+            if (item.getTitle().toLowerCase().contains(query)) {
+                if (item instanceof Book) System.out.print("BOOK - ");
+                else if (item instanceof DVD) System.out.print("DVD - ");
+                else if (item instanceof Magazine) System.out.print("MAGAZINE - ");
+                System.out.println(item.toString());
+                matches++;
+            }
+        }
+        if (matches == 0) {
+            System.out.println("No items matched '" + query + "'.");
+        } else {
+            System.out.println(matches + " item(s) matched.");
+        }
+    }
+
+    @Override
+    public void removeItem() {
+        // stub — implemented in next commit
+    }
+
     @Override
     public void  editTitleItem() {
         Scanner s = new Scanner(System.in);

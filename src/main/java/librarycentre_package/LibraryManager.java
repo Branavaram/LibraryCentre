@@ -19,4 +19,8 @@ public interface LibraryManager {
     void runGUI(); // Run main GUI
     
     void editTitleItem() ;
+
+    void searchByTitle();
+
+    void removeItem();
 }
