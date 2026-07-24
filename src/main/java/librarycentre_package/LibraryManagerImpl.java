@@ -38,6 +38,8 @@ public class LibraryManagerImpl implements LibraryManager {
 
         System.out.println("Search by Title, press 5");
 
+        System.out.println("Remove an item by ISBN, press 6");
+
         // Switch based on selected option
         Scanner s = new Scanner(System.in);
         int choice;
@@ -69,6 +71,9 @@ public class LibraryManagerImpl implements LibraryManager {
                 break;
            case 5:
                 this.searchByTitle();
+                break;
+           case 6:
+                this.removeItem();
                 break;
         }
         
@@ -229,7 +234,29 @@ public class LibraryManagerImpl implements LibraryManager {
 
     @Override
     public void removeItem() {
-        // stub — implemented in next commit
+        if (itemList.isEmpty()) {
+            System.out.println("There are no items in the system.");
+            return;
+        }
+
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the ISBN of the item to remove:");
+        String isbn = s.nextLine();
+
+        Item toRemove = null;
+        for (Item item : itemList) {
+            if (item.getISBN().equals(isbn)) {
+                toRemove = item;
+                break;
+            }
+        }
+        if (toRemove == null) {
+            System.out.println("No item found with ISBN " + isbn + ".");
+            return;
+        }
+
+        itemList.remove(toRemove);
+        System.out.println("Removed: " + toRemove.getTitle());
     }
 
     @Override
